@@ -1,0 +1,6 @@
+VK_WALL = "vk_wall"
+VK_OK_NEW_AVATAR = "vkokn_avatar"
+VK_OK_OLD_AVATAR = "vkok_avatar"
+TIKTOK_AVATAR = "tt_avatar"
+CLUBHOUSE_AVATAR = "ch_avatar"
+CELEBRITIES = "sb_photo"
