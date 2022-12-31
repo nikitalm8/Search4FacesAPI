@@ -15,7 +15,7 @@ A simple library with async capabilities to interact with Search4Faces [API](htt
 
 ## Usage
 
-With ``SearchClient`` you can easily find social media profiles with similar faces. It is a great tool for finding duplicates, finding people, and more.'
+With ``SearchClient`` you can easily find social media profiles with similar faces. It is a great tool for finding duplicates, finding people, and more.
 
 ## Documentation
 
