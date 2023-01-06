@@ -43,8 +43,6 @@ pip install Search4Faces
 ## Examples
 
 ```python
-import asyncio
-
 from Search4Faces import (
     SearchClient, 
     SearchAPIError, 
@@ -52,8 +50,10 @@ from Search4Faces import (
     sources,
 )
 
-TOKEN = 'your-token'
-client = SearchClient(TOKEN) # if token is invalid, raises SearchAPIError
+client = SearchClient(
+    token='your-token',     
+    no_check=False,    # if you want to disable token check
+) 
 
 # you can use photo's url - client will fetch the image for you
 photo_url = 'https://imgur.com/XYZ.jpg'
@@ -79,9 +79,7 @@ except SearchAPIError as exc:
     print(exc)
 
 # you can use some async methods
-asyncio.run(
-    client.find_similar_async(photo_url)
-)
+await client.find_similar_async(photo_url)
 ```
 
-Developed by Nikita Minaev (c) 2022
+Developed by Nikita Minaev (c) 2023

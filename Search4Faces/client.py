@@ -24,7 +24,7 @@ class SearchClient:
     }
     API_URL = 'https://search4faces.com/api/json-rpc/v1'
 
-    def __init__(self, token: str):
+    def __init__(self, token: str, no_check: bool=False):
         """
         Creates a new api client instance.
         Documentation: https://search4faces.com/api.html
@@ -37,10 +37,9 @@ class SearchClient:
         self.client = httpx.Client(timeout=120)
         self.async_client = httpx.AsyncClient(timeout=120)
 
-        response = self._make_request(method="rateLimit")
-        if 'error' in response:
+        if not no_check:
 
-            raise SearchAPIError(response['error'])
+            self._make_request(method='rateLimit')
 
 
     @property
@@ -97,7 +96,7 @@ class SearchClient:
     async def find_similar_async(
         self, 
         image: Union[io.BytesIO, str], 
-        source: str='vk_wall', 
+        source: str='vkokn_avatar', 
         show_hidden: bool=True, 
         results: int=10,
     ) -> list[MatchedPerson]:
@@ -150,7 +149,7 @@ class SearchClient:
     def find_similar(
         self, 
         image: Union[io.BytesIO, str], 
-        source: str='vk_wall',
+        source: str='vkokn_avatar',
         show_hidden: bool=True, 
         results: int=10,
     ) -> list[MatchedPerson]:
