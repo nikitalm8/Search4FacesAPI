@@ -3,7 +3,6 @@ import httpx
 
 from .models import MatchedPerson
 from .exceptions import (
-    SearchAPIError,
     check_for_errors, 
     check_for_errors_async,
 )
