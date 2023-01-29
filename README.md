@@ -5,7 +5,7 @@
             <img src="https://img.shields.io/pypi/v/Search4Faces?style=flat-square" alt="PyPI">
         </a>
         <a href="https://pypi.org/project/Search4Faces/">
-            <img src="https://img.shields.io/pypi/dd/Search4Faces?style=flat-square" alt="PyPI">
+            <img src="https://img.shields.io/pypi/dm/Search4Faces?style=flat-square" alt="PyPI">
         </a>
     </p>
 </div>
